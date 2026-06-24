@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap');
+
+@layer base {
+  :root {
+    --background: 40 33% 97%;
+    --foreground: 22 28% 22%;
+    --card: 40 33% 97%;
+    --card-foreground: 22 28% 22%;
+    --popover: 40 33% 97%;
+    --popover-foreground: 22 28% 22%;
+    --primary: 12 30% 69%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 28 28% 84%;
+    --secondary-foreground: 22 28% 22%;
+    --muted: 28 28% 91%;
+    --muted-foreground: 15 14% 56%;
+    --accent: 136 15% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 28 20% 87%;
+    --input: 28 20% 87%;
+    --ring: 12 30% 69%;
+    --radius: 0.5rem;
+    --font-cormorant: 'Cormorant Garamond', Georgia, serif;
+    --font-dm-sans: 'DM Sans', system-ui, sans-serif;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body {
+    @apply bg-cream text-walnut font-sans antialiased;
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+  h1, h2, h3, h4 { @apply font-display; }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-sm bg-rose-dusty px-6 py-3
+           text-sm font-sans font-medium text-white tracking-wide
+           transition-all duration-200 hover:bg-rose-dark
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-dusty;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-sm border border-walnut/20
+           px-6 py-3 text-sm font-sans font-medium text-walnut tracking-wide
+           transition-all duration-200 hover:bg-linen
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-walnut/20;
+  }
+  .category-pill {
+    @apply inline-flex items-center rounded-full border border-linen px-4 py-1.5
+           text-xs font-sans font-medium tracking-widest uppercase
+           transition-all duration-200 cursor-pointer select-none;
+  }
+  .category-pill-active {
+    @apply bg-walnut text-cream border-walnut;
+  }
+  .category-pill-inactive {
+    @apply bg-cream text-walnut/70 hover:bg-linen hover:text-walnut;
+  }
+}
+
+/* Bloom hover effect — the signature element */
+.product-card {
+  @apply relative overflow-hidden;
+}
+.product-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(201,169,154,0.12) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+.product-card:hover::after { opacity: 1; }
+.product-card:hover .product-image { transform: scale(1.04); }
+.product-image { transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); }

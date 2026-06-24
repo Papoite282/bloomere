@@ -1,0 +1,522 @@
+import type { Product, ProductCategory, CategoryMeta } from "@/types";
+
+export const products: Product[] = [
+  // ── SOFT LANDSCAPES (18) ────────────────────────────────────────────
+  {
+    id: "sl-01",
+    slug: "coastal-landscape-print",
+    title: "Coastal Landscape Print",
+    shortTitle: "Coastal Landscape",
+    description:
+      "A serene pastel beach wall art piece inspired by soft ocean mornings. Minimalist seascape in neutral coastal tones — perfect for a calm, airy space.",
+    price: 4.75,
+    category: "soft-landscapes",
+    tags: ["coastal", "beach", "ocean", "minimalist", "pastel", "neutral"],
+    etsy_listing_id: "4525321725",
+    image: "/images/products/coastal-landscape-print.jpg",
+    featured: true,
+  },
+  {
+    id: "sl-02",
+    slug: "lavender-field-print",
+    title: "Lavender Field Print",
+    shortTitle: "Lavender Field",
+    description:
+      "Watercolor wall art of a sun-kissed lavender meadow. Cottagecore landscape with purple flower fields and a soft pastel sunset — nature at its most peaceful.",
+    price: 4.75,
+    category: "soft-landscapes",
+    tags: ["lavender", "field", "cottagecore", "purple", "sunset", "meadow"],
+    etsy_listing_id: "4525316475",
+    image: "/images/products/lavender-field-print.jpg",
+    featured: true,
+  },
+  {
+    id: "sl-03",
+    slug: "wildflower-meadow-print",
+    title: "Wildflower Meadow Print",
+    shortTitle: "Wildflower Meadow",
+    description:
+      "Minimalist landscape wall art of a wildflower countryside. Soft watercolor printable with cottage-inspired rural charm for any room.",
+    price: 4.75,
+    category: "soft-landscapes",
+    tags: ["wildflower", "meadow", "cottagecore", "countryside", "soft"],
+    etsy_listing_id: "4525316056",
+    image: "/images/products/wildflower-meadow-print.jpg",
+  },
+  {
+    id: "sl-04",
+    slug: "lavender-field-landscape-print",
+    title: "Lavender Field Landscape Print",
+    shortTitle: "Lavender Landscape",
+    description:
+      "Cottagecore wall art of a lush lavender field landscape. Pastel countryside printable with rustic farmhouse charm and a soft meadow painting feel.",
+    price: 5.94,
+    category: "soft-landscapes",
+    tags: ["lavender", "landscape", "cottagecore", "rustic", "farmhouse"],
+    etsy_listing_id: "4525313346",
+    image: "/images/products/lavender-field-landscape-print.jpg",
+  },
+  {
+    id: "sl-05",
+    slug: "pink-countryside-landscape-print",
+    title: "Pink Countryside Landscape Print",
+    shortTitle: "Pink Countryside",
+    description:
+      "Cottagecore wall art in soft blush tones. Pastel meadow printable with gentle mountain landscapes and a whisper of spring in every brushstroke.",
+    price: 4.75,
+    category: "soft-landscapes",
+    tags: ["pink", "countryside", "spring", "pastel", "mountain"],
+    etsy_listing_id: "4525303921",
+    image: "/images/products/pink-countryside-landscape-print.jpg",
+    featured: true,
+  },
+  {
+    id: "sl-06",
+    slug: "countryside-path-landscape-print",
+    title: "Countryside Path Landscape Print",
+    shortTitle: "Countryside Path",
+    description:
+      "Cottagecore wall art of a winding rural road through green meadows. Soft watercolor in warm country tones — a walk through the English countryside.",
+    price: 5.94,
+    category: "soft-landscapes",
+    tags: ["path", "countryside", "green", "rural", "road", "watercolor"],
+    etsy_listing_id: "4525309816",
+    image: "/images/products/countryside-path-landscape-print.jpg",
+  },
+  {
+    id: "sl-07",
+    slug: "pastel-countryside-landscape-print",
+    title: "Pastel Countryside Landscape Print",
+    shortTitle: "Pastel Countryside",
+    description:
+      "Soft field wall art in pastel countryside tones. Cottagecore decor with rustic watercolor printable ideal for living rooms and bedrooms.",
+    price: 4.75,
+    category: "soft-landscapes",
+    tags: ["pastel", "countryside", "field", "cottagecore", "rustic"],
+    etsy_listing_id: "4525307870",
+    image: "/images/products/pastel-countryside-landscape-print.jpg",
+  },
+  {
+    id: "sl-08",
+    slug: "pink-sunset-landscape-print",
+    title: "Pink Sunset Landscape Print",
+    shortTitle: "Pink Sunset",
+    description:
+      "Coastal cottagecore wall art with a soft pink seascape at dusk. Calm watercolor nature printable — the kind of sunset you want to remember.",
+    price: 5.94,
+    category: "soft-landscapes",
+    tags: ["sunset", "pink", "coastal", "seascape", "calm", "watercolor"],
+    etsy_listing_id: "4525297491",
+    image: "/images/products/pink-sunset-landscape-print.jpg",
+  },
+  {
+    id: "sl-09",
+    slug: "wildflower-meadow-landscape-print",
+    title: "Wildflower Meadow Landscape Print",
+    shortTitle: "Wildflower Landscape",
+    description:
+      "Cottagecore wall art with soft countryside wildflowers. Pastel landscape printable with rustic nature charm — bring the outdoors in.",
+    price: 5.94,
+    category: "soft-landscapes",
+    tags: ["wildflower", "meadow", "cottagecore", "rustic", "nature"],
+    etsy_listing_id: "4525295969",
+    image: "/images/products/wildflower-meadow-landscape-print.jpg",
+  },
+  {
+    id: "sl-10",
+    slug: "minimalist-landscape-print-neutral",
+    title: "Minimalist Landscape Print",
+    shortTitle: "Minimalist Neutral",
+    description:
+      "Neutral wall art in a Scandinavian-inspired landscape style. Soft countryside watercolor printable — quiet, minimal, and timeless.",
+    price: 4.75,
+    category: "soft-landscapes",
+    tags: ["minimalist", "neutral", "scandinavian", "countryside", "soft"],
+    etsy_listing_id: "4525293281",
+    image: "/images/products/minimalist-landscape-print-neutral.jpg",
+    featured: true,
+  },
+  {
+    id: "sl-11",
+    slug: "minimalist-landscape-print-soft",
+    title: "Minimalist Landscape Print — Soft",
+    shortTitle: "Minimalist Soft",
+    description:
+      "Soft countryside wall art with neutral cottagecore tones. Watercolor landscape printable for rustic home decor — understated and elegant.",
+    price: 5.94,
+    category: "soft-landscapes",
+    tags: ["minimalist", "soft", "cottagecore", "rustic", "neutral"],
+    etsy_listing_id: "4525298036",
+    image: "/images/products/minimalist-landscape-print-soft.jpg",
+  },
+  {
+    id: "sl-12",
+    slug: "countryside-landscape-print-cottagecore",
+    title: "Countryside Landscape Print",
+    shortTitle: "English Countryside",
+    description:
+      "Cottagecore wall art inspired by the English countryside. Rustic farmhouse printable with soft green landscapes and rolling hills.",
+    price: 5.94,
+    category: "soft-landscapes",
+    tags: ["countryside", "english", "farmhouse", "green", "rustic"],
+    etsy_listing_id: "4525296086",
+    image: "/images/products/countryside-landscape-print-cottagecore.jpg",
+  },
+  {
+    id: "sl-13",
+    slug: "autumn-meadow-landscape-print",
+    title: "Autumn Meadow Landscape Print",
+    shortTitle: "Autumn Meadow",
+    description:
+      "Cottagecore countryside wall art in warm autumn tones. A rustic printable capturing the golden hour of meadow and harvest — cosy and inviting.",
+    price: 5.94,
+    category: "soft-landscapes",
+    tags: ["autumn", "meadow", "cottagecore", "warm", "rustic", "golden"],
+    etsy_listing_id: "4521520880",
+    image: "/images/products/autumn-meadow-landscape-print.jpg",
+  },
+  {
+    id: "sl-14",
+    slug: "soft-pastel-landscape-print",
+    title: "Soft Pastel Landscape Print",
+    shortTitle: "Soft Pastel",
+    description:
+      "Minimalist countryside wall art in delicate pastel shades. Neutral printable decor for a serene, airy atmosphere in any room.",
+    price: 4.75,
+    category: "soft-landscapes",
+    tags: ["pastel", "minimalist", "countryside", "soft", "neutral"],
+    etsy_listing_id: "4521518430",
+    image: "/images/products/soft-pastel-landscape-print.jpg",
+  },
+  {
+    id: "sl-15",
+    slug: "soft-hills-landscape-print",
+    title: "Soft Hills Landscape Print",
+    shortTitle: "Soft Hills",
+    description:
+      "Quiet countryside wall art with gentle rolling hills. Cottagecore digital download for a peaceful, grounding atmosphere in your home.",
+    price: 5.94,
+    category: "soft-landscapes",
+    tags: ["hills", "quiet", "countryside", "cottagecore", "peaceful"],
+    etsy_listing_id: "4521511557",
+    image: "/images/products/soft-hills-landscape-print.jpg",
+  },
+  {
+    id: "sl-16",
+    slug: "green-landscape-print",
+    title: "Green Landscape Print",
+    shortTitle: "Green Landscape",
+    description:
+      "Soft countryside wall art in lush, muted greens. Cottagecore meadow printable — like stepping into a quiet field on a still morning.",
+    price: 5.94,
+    category: "soft-landscapes",
+    tags: ["green", "landscape", "countryside", "meadow", "cottagecore"],
+    etsy_listing_id: "4521513626",
+    image: "/images/products/green-landscape-print.jpg",
+  },
+  {
+    id: "sl-17",
+    slug: "meadow-landscape-print",
+    title: "Meadow Landscape Print",
+    shortTitle: "Meadow Path",
+    description:
+      "Cottagecore countryside wall art along a soft country path. Meadow printable in watercolor tones that feel like a Sunday afternoon stroll.",
+    price: 5.94,
+    category: "soft-landscapes",
+    tags: ["meadow", "countryside", "path", "watercolor", "cottagecore"],
+    etsy_listing_id: "4521506027",
+    image: "/images/products/meadow-landscape-print.jpg",
+  },
+  {
+    id: "sl-18",
+    slug: "countryside-watercolor-landscape-print",
+    title: "Countryside Watercolor Landscape Print",
+    shortTitle: "Watercolor Road",
+    description:
+      "Cottagecore wall art with a soft watercolor country road winding through open fields. Timeless, quiet, and utterly peaceful.",
+    price: 5.94,
+    category: "soft-landscapes",
+    tags: ["countryside", "watercolor", "road", "cottagecore", "fields"],
+    etsy_listing_id: "4521508560",
+    image: "/images/products/countryside-watercolor-landscape-print.jpg",
+  },
+
+  // ── BOTANICAL PRINTS (10) ────────────────────────────────────────────
+  {
+    id: "bp-01",
+    slug: "blue-flower-watercolor-print",
+    title: "Blue Flower Watercolor Print",
+    shortTitle: "Blue Flower",
+    description:
+      "Botanical wall art with delicate soft blue florals. Cottagecore printable art inspired by wildflowers and morning dew.",
+    price: 4.75,
+    category: "botanical-prints",
+    tags: ["blue", "flower", "botanical", "soft", "cottagecore", "floral"],
+    etsy_listing_id: "4516488648",
+    image: "/images/products/blue-flower-watercolor-print.jpg",
+    featured: true,
+  },
+  {
+    id: "bp-02",
+    slug: "pink-floral-bougainvillea-print",
+    title: "Pink Floral Watercolor Print — Bougainvillea",
+    shortTitle: "Bougainvillea",
+    description:
+      "Bougainvillea wall art in romantic cottagecore botanical style. Soft pink watercolor florals that bloom with Mediterranean warmth.",
+    price: 5.94,
+    category: "botanical-prints",
+    tags: ["pink", "bougainvillea", "botanical", "romantic", "cottagecore"],
+    etsy_listing_id: "4516486110",
+    image: "/images/products/pink-floral-bougainvillea-print.jpg",
+    featured: true,
+  },
+  {
+    id: "bp-03",
+    slug: "pink-floral-wall-art",
+    title: "Pink Floral Wall Art",
+    shortTitle: "Pink Floral",
+    description:
+      "Watercolor botanical print with feminine floral charm. Soft pink printable artwork that adds a gentle, romantic touch to any room.",
+    price: 4.75,
+    category: "botanical-prints",
+    tags: ["pink", "floral", "botanical", "feminine", "watercolor"],
+    etsy_listing_id: "4516476447",
+    image: "/images/products/pink-floral-wall-art.jpg",
+  },
+  {
+    id: "bp-04",
+    slug: "protea-flower-print",
+    title: "Protea Flower Print",
+    shortTitle: "Protea",
+    description:
+      "Botanical watercolor artwork featuring the striking protea flower. Floral wall decor with a bold yet delicate presence — nature's quiet drama.",
+    price: 5.94,
+    category: "botanical-prints",
+    tags: ["protea", "botanical", "flower", "watercolor", "floral"],
+    etsy_listing_id: "4516473635",
+    image: "/images/products/protea-flower-print.jpg",
+  },
+  {
+    id: "bp-05",
+    slug: "bird-of-paradise-print",
+    title: "Bird of Paradise Print",
+    shortTitle: "Bird of Paradise",
+    description:
+      "Tropical botanical wall art with watercolor Strelitzia. A striking bird of paradise artwork that brings exotic botanical elegance to any wall.",
+    price: 5.94,
+    category: "botanical-prints",
+    tags: ["bird of paradise", "strelitzia", "tropical", "botanical", "exotic"],
+    etsy_listing_id: "4516464584",
+    image: "/images/products/bird-of-paradise-print.jpg",
+  },
+  {
+    id: "bp-06",
+    slug: "botanical-watercolor-green-leaf",
+    title: "Botanical Watercolor Print",
+    shortTitle: "Green Leaf Botanical",
+    description:
+      "Green leaf wall art in tropical plant decor style. Printable botanical artwork with lush, layered foliage for a natural, grounded space.",
+    price: 5.94,
+    category: "botanical-prints",
+    tags: ["green", "leaf", "tropical", "botanical", "plant", "foliage"],
+    etsy_listing_id: "4516464273",
+    image: "/images/products/botanical-watercolor-green-leaf.jpg",
+  },
+  {
+    id: "bp-07",
+    slug: "monstera-wall-art-print",
+    title: "Monstera Wall Art Print",
+    shortTitle: "Monstera",
+    description:
+      "Tropical botanical decor with a watercolor monstera leaf. Printable plant poster that brings lush, modern botanical energy into your space.",
+    price: 5.94,
+    category: "botanical-prints",
+    tags: ["monstera", "tropical", "botanical", "leaf", "plant", "modern"],
+    etsy_listing_id: "4516443596",
+    image: "/images/products/monstera-wall-art-print.jpg",
+  },
+  {
+    id: "bp-08",
+    slug: "green-eucalyptus-print",
+    title: "Green Eucalyptus Print",
+    shortTitle: "Green Eucalyptus",
+    description:
+      "Botanical wall art with soft eucalyptus branches in watercolor. Cottagecore printable with muted green tones perfect for any interior.",
+    price: 5.94,
+    category: "botanical-prints",
+    tags: ["eucalyptus", "green", "botanical", "cottagecore", "watercolor"],
+    etsy_listing_id: "4515431059",
+    image: "/images/products/green-eucalyptus-print.jpg",
+  },
+  {
+    id: "bp-09",
+    slug: "blue-eucalyptus-print",
+    title: "Blue Eucalyptus Printable Wall Art",
+    shortTitle: "Blue Eucalyptus",
+    description:
+      "Watercolor botanical print with cool blue eucalyptus sprigs. Cottagecore nature wall art with a soft, dusty palette — serene and minimal.",
+    price: 5.94,
+    category: "botanical-prints",
+    tags: ["eucalyptus", "blue", "botanical", "cottagecore", "nature"],
+    etsy_listing_id: "4515242929",
+    image: "/images/products/blue-eucalyptus-print.jpg",
+  },
+  {
+    id: "bp-10",
+    slug: "eucalyptus-watercolor-print",
+    title: "Eucalyptus Watercolor Print",
+    shortTitle: "Eucalyptus",
+    description:
+      "Green botanical wall art with a minimalist eucalyptus printable poster. Neutral nature home decor at its most refined — less is quietly more.",
+    price: 4.75,
+    category: "botanical-prints",
+    tags: ["eucalyptus", "green", "minimalist", "neutral", "botanical"],
+    etsy_listing_id: "4514688236",
+    image: "/images/products/eucalyptus-watercolor-print.jpg",
+  },
+
+  // ── FRUIT PRINTS (8) ─────────────────────────────────────────────────
+  {
+    id: "fp-01",
+    slug: "pear-watercolor-print",
+    title: "Pear Watercolor Print",
+    shortTitle: "Pear",
+    description:
+      "Rustic kitchen wall art with a Mediterranean pear in watercolor. Cottagecore fruit decor for kitchens and dining spaces that love a touch of warmth.",
+    price: 5.94,
+    category: "fruit-prints",
+    tags: ["pear", "kitchen", "mediterranean", "rustic", "cottagecore"],
+    etsy_listing_id: "4514680225",
+    image: "/images/products/pear-watercolor-print.jpg",
+  },
+  {
+    id: "fp-02",
+    slug: "tomato-watercolor-print",
+    title: "Tomato Watercolor Print",
+    shortTitle: "Tomato",
+    description:
+      "Kitchen wall art with a juicy Mediterranean tomato in soft watercolor. A printable poster that makes kitchens feel warm, alive, and joyful.",
+    price: 4.75,
+    category: "fruit-prints",
+    tags: ["tomato", "kitchen", "mediterranean", "red", "watercolor"],
+    etsy_listing_id: "4514676184",
+    image: "/images/products/tomato-watercolor-print.jpg",
+  },
+  {
+    id: "fp-03",
+    slug: "lemon-watercolor-print",
+    title: "Lemon Watercolor Print",
+    shortTitle: "Portuguese Lemon",
+    description:
+      "Lemon print with Portuguese tile-inspired design. Mediterranean citrus printable poster that brings sun-drenched Lisbon warmth to your kitchen.",
+    price: 5.94,
+    category: "fruit-prints",
+    tags: ["lemon", "portuguese", "tile", "mediterranean", "citrus", "lisbon"],
+    etsy_listing_id: "4514672444",
+    image: "/images/products/lemon-watercolor-print.jpg",
+    featured: true,
+  },
+  {
+    id: "fp-04",
+    slug: "grapes-watercolor-print",
+    title: "Grapes Watercolor Print",
+    shortTitle: "Grapes",
+    description:
+      "Soft watercolor grapes in classic Mediterranean style. A printable for kitchens and dining areas that love a touch of vineyard romance.",
+    price: 5.94,
+    category: "fruit-prints",
+    tags: ["grapes", "wine", "mediterranean", "vineyard", "kitchen"],
+    etsy_listing_id: "4513440313",
+    image: "/images/products/grapes-watercolor-print.jpg",
+  },
+  {
+    id: "fp-05",
+    slug: "lemon-branch-watercolor-print",
+    title: "Lemon Branch Watercolor Print",
+    shortTitle: "Lemon Branch",
+    description:
+      "Delicate lemon branch in soft watercolor style. Mediterranean botanical fruit art — sun and citrus captured with a gentle hand.",
+    price: 5.94,
+    category: "fruit-prints",
+    tags: ["lemon", "branch", "botanical", "mediterranean", "citrus"],
+    etsy_listing_id: "4513425991",
+    image: "/images/products/lemon-branch-watercolor-print.jpg",
+  },
+  {
+    id: "fp-06",
+    slug: "orange-branch-watercolor-print",
+    title: "Orange Branch Watercolor Print",
+    shortTitle: "Orange Branch",
+    description:
+      "Warm orange branch in watercolor — Mediterranean fruit art in its most inviting form. A printable that smells of summer in southern Portugal.",
+    price: 5.94,
+    category: "fruit-prints",
+    tags: ["orange", "branch", "botanical", "mediterranean", "warm"],
+    etsy_listing_id: "4513422326",
+    image: "/images/products/orange-branch-watercolor-print.jpg",
+  },
+  {
+    id: "fp-07",
+    slug: "blueberry-watercolor-print",
+    title: "Blueberry Watercolor Print",
+    shortTitle: "Blueberries",
+    description:
+      "Sweet blueberry cluster in soft watercolor. Botanical fruit art with an understated, natural charm for kitchens and cosy corners alike.",
+    price: 5.94,
+    category: "fruit-prints",
+    tags: ["blueberry", "botanical", "fruit", "soft", "watercolor"],
+    etsy_listing_id: "4513403113",
+    image: "/images/products/blueberry-watercolor-print.jpg",
+  },
+  {
+    id: "fp-08",
+    slug: "olive-branch-watercolor-print",
+    title: "Olive Branch Watercolor Print",
+    shortTitle: "Olive Branch",
+    description:
+      "Botanical wall art with a Mediterranean olive branch in soft watercolor. Kitchen decor that speaks of quiet afternoons in the sun, somewhere near the sea.",
+    price: 5.94,
+    category: "fruit-prints",
+    tags: ["olive", "branch", "botanical", "mediterranean", "kitchen"],
+    etsy_listing_id: "4512977325",
+    image: "/images/products/olive-branch-watercolor-print.jpg",
+    featured: true,
+  },
+];
+
+export const categories: CategoryMeta[] = [
+  {
+    id: "botanical-prints",
+    label: "Botanical Prints",
+    description: "Eucalyptus, monstera, florals & more",
+    count: products.filter((p) => p.category === "botanical-prints").length,
+  },
+  {
+    id: "fruit-prints",
+    label: "Fruit Prints",
+    description: "Mediterranean citrus & botanical fruits",
+    count: products.filter((p) => p.category === "fruit-prints").length,
+  },
+  {
+    id: "soft-landscapes",
+    label: "Soft Landscapes",
+    description: "Meadows, countryside & coastal scenes",
+    count: products.filter((p) => p.category === "soft-landscapes").length,
+  },
+];
+
+export const featuredProducts = products.filter((p) => p.featured);
+
+export function getProductBySlug(slug: string): Product | undefined {
+  return products.find((p) => p.slug === slug);
+}
+
+export function getProductsByCategory(category: ProductCategory): Product[] {
+  return products.filter((p) => p.category === category);
+}
+
+export function getRelatedProducts(product: Product, limit = 4): Product[] {
+  return products
+    .filter((p) => p.category === product.category && p.id !== product.id)
+    .slice(0, limit);
+}
